@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponentComponent implements OnInit {
 
-  constructor() { }
+  public loading: boolean;
+
+  constructor() {
+    this.loading = false;
+  }
 
   ngOnInit() {
   }
 
+  login() {
+    this.loading = true;
+  }
 }
