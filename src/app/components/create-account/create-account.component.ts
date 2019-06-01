@@ -21,8 +21,9 @@ export class CreateAccountComponent implements OnInit {
 
   createUser() {
     this.loading = true;
-    this.http.post('/user', this.user).subscribe(response => {
+    this.http.post('/user', this.user).subscribe(() => {
       this.loading = false;
+      document.location.assign('/login/login.html');
     }, (error: HttpErrorResponse) => {
       this.error = error.message;
       this.loading = false;
