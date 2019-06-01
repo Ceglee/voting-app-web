@@ -67,4 +67,9 @@ export class VoteSubjectComponent implements OnInit {
       this.reloadVoting();
     });
   }
+
+  isActive() {
+    const now = new Date().getTime();
+    return (now -  Date.parse(this.subject.votingStart) > 0) && (Date.parse(this.subject.votingEnd) - now > 0);
+  }
 }

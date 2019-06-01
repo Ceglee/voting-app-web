@@ -1,0 +1,37 @@
+<button (click)="show = true" class="btn btn-primary m-2">Add new subject</button>
+<ng-container *ngIf="show">
+  <div class="modal fade show">
+    <app-loader *ngIf="loading"></app-loader>
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Create subject</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="show = false">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="input-group my-3">
+            <input [(ngModel)]="voteSubject.title" type="text" name="title" class="form-control" placeholder="title">
+          </div>
+          <div class="input-group my-3">
+            <textarea [(ngModel)]="voteSubject.description" type="text" name="description" class="form-control" placeholder="description"></textarea>
+          </div>
+          <div class="input-group my-3">
+            <input [(ngModel)]="voteSubject.votingStart" type="date" name="votingStart" class="form-control" placeholder="voting start">
+          </div>
+          <div class="input-group mb-3">
+            <input [(ngModel)]="voteSubject.votingEnd" type="date" name="votingEnd" class="form-control" placeholder="voting end">
+          </div>
+          <div class="d-flex justify-content-end">
+
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" (click)="createSubject()">Save changes</button>
+          <button type="button" class="btn btn-secondary" (click)="show = false">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>

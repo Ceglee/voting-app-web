@@ -18,11 +18,14 @@ export class VoteDashboardComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.reloadSubjects();
+  }
+
+  reloadSubjects() {
     this.loading = true;
     this.http.get<VoteSubject[]>('/api/subject').subscribe(subjects => {
       this.loading = false;
       this.subjects = subjects;
     });
   }
-
 }

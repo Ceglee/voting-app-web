@@ -9,6 +9,7 @@ import { CreateAccountComponent } from '@components/create-account/create-accoun
 import { LoaderComponent } from '@components/loader/loader.component';
 import { VoteSubjectComponent } from '@components/vote-subject/vote-subject.component';
 import { VoteDashboardComponent } from '@components/vote-dashboard/vote-dashboard.component';
+import { CreateVoteSubjectComponent } from '@components/create-vote-subject/create-vote-subject.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { VoteDashboardComponent } from '@components/vote-dashboard/vote-dashboar
     CreateAccountComponent,
     LoaderComponent,
     VoteSubjectComponent,
-    VoteDashboardComponent
+    VoteDashboardComponent,
+    CreateVoteSubjectComponent
   ],
   imports: [
     BrowserModule,

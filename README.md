@@ -6,3 +6,4 @@ frontend part
 hardcoded because of lack of time
 no error handling
 no time for services
+no datepicker!
