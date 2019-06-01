@@ -1,0 +1,28 @@
+<div class="card my-3">
+  <app-loader *ngIf="loading"></app-loader>
+  <div class="card-body">
+    <h5 class="card-title text-center">Create your account</h5>
+    <p class="card-text">
+      Use this form to create account. There is no validation, so pay attention to values you provide.
+    </p>
+    <div class="input-group my-3">
+      <input [(ngModel)]="user.firstName" type="text" name="firstName" class="form-control" placeholder="firstName" aria-label="firstName">
+    </div>
+    <div class="input-group my-3">
+      <input [(ngModel)]="user.lastName" type="text" name="lastName" class="form-control" placeholder="lastName" aria-label="lastName">
+    </div>
+    <div class="input-group my-3">
+      <input [(ngModel)]="user.login" type="text" name="username" class="form-control" placeholder="Username" aria-label="Username">
+    </div>
+    <div class="input-group mb-3">
+      <input [(ngModel)]="user.password" type="password" name="password" class="form-control" placeholder="Password" aria-label="Password">
+    </div>
+    <div class="d-flex justify-content-end">
+      <button name="submit" type="submit" value="submit"  class="btn btn-primary" (click)="createUser()">Create</button>
+    </div>
+    <div *ngIf="error">
+      <div class="border-bottom my-3"></div>
+      <p class="card-text text-danger">{{error}}</p>
+    </div>
+  </div>
+</div>
