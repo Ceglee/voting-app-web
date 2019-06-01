@@ -6,14 +6,18 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from '@components/app-root/app.component';
 import { LoginComponentComponent } from '@components/login-component/login-component.component';
 import { CreateAccountComponent } from '@components/create-account/create-account.component';
-import { LoaderComponent } from '@components//loader/loader.component';
+import { LoaderComponent } from '@components/loader/loader.component';
+import { VoteSubjectComponent } from '@components/vote-subject/vote-subject.component';
+import { VoteDashboardComponent } from '@components/vote-dashboard/vote-dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponentComponent,
     CreateAccountComponent,
-    LoaderComponent
+    LoaderComponent,
+    VoteSubjectComponent,
+    VoteDashboardComponent
   ],
   imports: [
     BrowserModule,

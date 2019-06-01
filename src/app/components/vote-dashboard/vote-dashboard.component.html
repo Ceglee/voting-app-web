@@ -1,0 +1,8 @@
+<app-loader *ngIf="loading"></app-loader>
+<!--<div class="d-flex flex-wrap">-->
+<div class="row">
+  <div *ngFor="let subject of subjects" class="col-12 coll-md-6 col-lg-4 col-xl-3">
+    <app-vote-subject [subject]="subject"></app-vote-subject>
+  </div>
+</div>
+
