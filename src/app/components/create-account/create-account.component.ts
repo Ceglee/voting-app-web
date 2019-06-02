@@ -23,7 +23,7 @@ export class CreateAccountComponent implements OnInit {
     this.loading = true;
     this.http.post('/user', this.user).subscribe(() => {
       this.loading = false;
-      document.location.assign('/login/login.html');
+      document.location.assign('/login.html');
     }, (error: HttpErrorResponse) => {
       this.error = error.message;
       this.loading = false;
