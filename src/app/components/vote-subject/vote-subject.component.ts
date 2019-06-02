@@ -68,8 +68,20 @@ export class VoteSubjectComponent implements OnInit {
     });
   }
 
-  isActive() {
+  get isActive() {
+    return this.notStarted && this.notFinished;
+  }
+
+  get notStarted() {
     const now = new Date().getTime();
-    return (now -  Date.parse(this.subject.votingStart) > 0) && (Date.parse(this.subject.votingEnd) - now > 0);
+    return now -  Date.parse(this.subject.votingStart) > 0;
+  }
+  get notFinished() {
+    const now = new Date().getTime();
+    return Date.parse(this.subject.votingEnd) - now > 0;
+  }
+
+  get header() {
+    return this.isActive ? 'Voting ongoing' : this.notFinished ? 'Voting not started yet' : 'Voting finished';
   }
 }
